@@ -27,6 +27,10 @@ public class Voucher {
 
     private List<String> requirements;
 
+    private String expiryDate;
+
+    private double voucherAmount;
+
     public Voucher() {
     }
 
@@ -100,5 +104,21 @@ public class Voucher {
 
     public void setRequirements(List<String> requirements) {
         this.requirements = requirements;
+    }
+
+    public String getExpiryDate() {
+        return expiryDate;
+    }
+
+    public void setExpiryDate(String expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+
+    public double getVoucherAmount() {
+        return voucherAmount;
+    }
+
+    public void setVoucherAmount(double voucherAmount) {
+        this.voucherAmount = voucherAmount;
     }
 }

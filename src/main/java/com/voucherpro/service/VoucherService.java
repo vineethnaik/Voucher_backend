@@ -68,6 +68,8 @@ public class VoucherService {
         voucher.setDiscountPrice(request.getDiscountPrice());
         voucher.setDescription(request.getDescription().trim());
         voucher.setBadge(request.getBadge().trim());
+        voucher.setExpiryDate(request.getExpiryDate().trim());
+        voucher.setVoucherAmount(request.getVoucherAmount());
         voucher.setRequirements(
                 request.getRequirements().stream()
                         .map(String::trim)

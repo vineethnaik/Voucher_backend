@@ -33,6 +33,12 @@ public class VoucherRequest {
     @NotEmpty(message = "At least one prerequisite is required")
     private List<@NotBlank(message = "Prerequisite cannot be blank") String> requirements;
 
+    @NotBlank(message = "Expiry date is required")
+    private String expiryDate;
+
+    @Positive(message = "Voucher amount must be greater than zero")
+    private double voucherAmount;
+
     public String getTitle() {
         return title;
     }
@@ -95,5 +101,21 @@ public class VoucherRequest {
 
     public void setRequirements(List<String> requirements) {
         this.requirements = requirements;
+    }
+
+    public String getExpiryDate() {
+        return expiryDate;
+    }
+
+    public void setExpiryDate(String expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+
+    public double getVoucherAmount() {
+        return voucherAmount;
+    }
+
+    public void setVoucherAmount(double voucherAmount) {
+        this.voucherAmount = voucherAmount;
     }
 }
